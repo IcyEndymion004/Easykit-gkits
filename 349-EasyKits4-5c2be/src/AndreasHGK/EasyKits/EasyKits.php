@@ -62,17 +62,17 @@ class EasyKits extends PluginBase {
             }
         }
         $commands = [
-            new CreatekitCommand(),
-            new DeletekitCommand(),
-            new EditkitCommand(),
+            new CreateGkitCommand(),
+            new DeleteGkitCommand(),
+            new EditGkitCommand(),
             new EKImportCommand(),
-            new KitCommand(),
-            new GivekitCommand(),
+            new GKitCommand(),
+            new GiveGkitCommand(),
         ];
         if(DataManager::getKey(DataManager::CONFIG, "enable-categories")) {
             array_push($commands,
-                new CreatecategoryCommand(),
-                new DeletecategoryCommand()
+                new CreateGkitcategoryCommand(),
+                new DeleteGkitcategoryCommand()
             );
         }
         foreach($commands as $command) {
